@@ -1,0 +1,43 @@
+<!doctype html>
+<title>Temperature List</title>
+<head>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <h1>Database Listing.....</h1>
+    <table style="width:80%;">
+        <tr>
+          <th>id</th>
+          <th>timestamp</th>
+          <th>temperature</th>
+          <th>duration</th>
+        </tr>
+        {% for index,row in data.iterrows() %}
+        <tr>
+          <td><a href="information/{{ row['id'] }}"> {{ row['id'] }} </a></td>
+          <td>{{ row['timestamp']}}</td>
+          <td>{{ row['temperature']}}</td>
+          <td>{{ row['duration']}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+</body>
+
+

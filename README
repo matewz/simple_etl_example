@@ -1,0 +1,26 @@
+Simple App to load and store data from CSV file at SQLite database.
+
+- Use application *importData.py* to transfers `task_data.csv` to a database
+- Use *visualization.py* for a web application for connect and visualize this database
+
+To load data from CSV just replace csv file from folder and execute.
+`python importData.py`
+
+After this step you can see data using:
+`python importData.py`
+
+And then go to browser and access address:
+`http://127.0.0.1`
+
+You can see detail of measurement click at number at `id column`.
+
+Technology and Justification
+Database: 
+    - SQLite. I chose this because is very small, fast and easy to solve this demand.
+    - For this project i wrote SQL's query like text to show my knowledge but it can work with SQLAlchemy too.
+
+WEB: 
+    - Flask and Jinja2. 
+    - Small, realiable and fast to solve it.
+
+I tried to create a auto solve app. So if don't exists a database it going to create database and the schema too.
